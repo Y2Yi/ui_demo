@@ -1,10 +1,17 @@
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         File originalDirectory = new File("original");
+//        File buildDirectory = new File("/build");
+//        if (!buildDirectory.exists()) {
+//            if (!buildDirectory.createNewFile()) {
+//                System.err.println("创建build目录失败");
+//                return;
+//            }
+//        }
+        System.out.println(new Main().getPath());
         for (File file : Objects.requireNonNull(originalDirectory.listFiles())) {
             String names = file.getName();
             if (names.contains("md")) {
@@ -16,4 +23,10 @@ public class Main {
         }
 
     }
+
+    public String getPath() {
+        return this.getClass().getClassLoader().getResource("").getPath();
+    }
+
+
 }

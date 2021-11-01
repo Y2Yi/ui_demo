@@ -20,11 +20,11 @@ binding.mStepper.apply {
   // 区分增、减的状态改变监听
   setListener(object : AGStepper.IOnStepperCriticalPointListener {
     override fun onDecrease(minValue: Int) {
-      ToastUtils.showShort(R.string.ui_at_least)
+      
     }
 
     override fun onIncrease(maxValue: Int) {
-      ToastUtils.showShort(R.string.ui_no_more)
+      
     }
 
   })
