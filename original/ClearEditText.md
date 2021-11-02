@@ -10,8 +10,8 @@ ClearEditText
     android:textSize="@dimen/ig_dp_14"
     android:padding="@dimen/ig_dp_8"
     app:IGDrawableClear="@drawable/ig_search_bar_clear" // 删除按钮（通常是个x）
-    app:IGDrawableLabel="@drawable/ig_icon_search"> //左侧图标（通常是个放大镜）
-  </com.guang.max.widget.text.ClearEditText>
+    app:IGDrawableLabel="@drawable/ig_icon_search" //左侧图标（通常是个放大镜）
+  />
 ```
 
 ## 说明
