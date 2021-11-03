@@ -25,7 +25,7 @@ RoundButton
   // 渐变背景
   app:gradientOrientation="渐变方向，支持八个方向"
   app:bgStartColor="渐变起始颜色"
-	app:bgEndColor="渐变终止颜色"      
+  app:bgEndColor="渐变终止颜色"      
   app:bgStartColor_disable="禁用时渐变起始颜色"
   app:bgEndColor_disable="禁用时渐变终止颜色" />
 ```
