@@ -31,7 +31,15 @@ YzImgView
   app:yzimg_aspectRatio="宽高比"
                             
   // resize
-  app:yzimg_autoResize="是否按照控件尺寸去远端加载合适大小的图片" />
+  app:yzimg_autoResize="是否按照控件尺寸去远端加载合适大小的图片"
+                            
+ 	// 高斯模糊       
+  app:yzimg_isBlur="是否模糊"
+  app:yzimg_blurRadius="模糊半径，默认12"
+  app:yzimg_blurSampleRatio="采样率，默认0.5f"
+     
+  // GIF标志                          
+  app:yzimg_isGif="true" />
 ```
 
 ## 说明
