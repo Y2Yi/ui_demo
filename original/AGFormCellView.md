@@ -11,7 +11,7 @@ AGFormCellView
   app:fcDescText="左下描述文字"
   app:fcContentText="右侧描述文字"
   app:fcContentImg="右侧描述文字的图片（20x20）"
-  app:fcContentType="右侧描述文字的强弱:hard|weak" //强提示：#646566、弱提示：#c8c9cc
+  app:fcContentType="右侧描述文字的强弱:hard|weak" 强提示#646566 | 弱提示#c8c9cc
   app:fcRightImg="右侧icon,单独出现（32x32）"    
   app:fcBottomLineVisible="单元格上、下分割线的显示隐藏:true|false" 
   app:fcArrowRightVisible="右侧箭头图标的显示与隐藏:true|false" /> 
