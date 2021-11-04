@@ -38,8 +38,8 @@ YzImgView
   app:yzimg_blurRadius="模糊半径，默认12"
   app:yzimg_blurSampleRatio="采样率，默认0.5f"
      
-  // GIF标志                          
-  app:yzimg_isGif="true" />
+  // GIF                          
+  app:yzimg_isGif="GIF标志" />
 ```
 
 ## 说明
