@@ -1,4 +1,4 @@
-LineSpaceTextView
+# LineSpaceTextView - 行间距自适应多行文本
 
 ## XML Code
 

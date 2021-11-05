@@ -1,4 +1,4 @@
-ClearEditText
+# ClearEditText - 一键删除输入框
 
 ## XML Code
 

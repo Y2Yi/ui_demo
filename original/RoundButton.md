@@ -1,4 +1,4 @@
-RoundButton
+# RoundButton - 圆角渐变按钮
 
 ## XML 
 
@@ -34,40 +34,38 @@ RoundButton
 
 1. 默认提供两种常用样式：`style`
 
-   - 渐变色按钮风格 `BaseGradientButtonStyle`
+   使用：
 
-   - 带边框按钮风格 `BaseBorderButtonStyle`
+   ```xml
+   // 样式一 ： 渐变色按钮风格
+   <com.guang.max.widget.button.RoundButton
+     style="@style/BaseGradientButtonStyle"
+     android:layout_width="match_parent"
+     android:layout_height="64dp" />
+   
+   // 样式二 ： 带边框按钮风格
+   <com.guang.max.widget.button.RoundButton
+     style="@style/BaseBorderButtonStyle"
+     android:layout_width="match_parent"
+     android:layout_height="64dp" />
+   ```
 
-   - 使用：
-
-   - ```xml
-     // 样式一 ： 渐变色按钮风格
-     <com.guang.max.widget.button.RoundButton
-       style="@style/BaseGradientButtonStyle"
-       android:layout_width="match_parent"
-       android:layout_height="64dp" />
-     
-     // 样式二 ： 带边框按钮风格
-     <com.guang.max.widget.button.RoundButton
-       style="@style/BaseBorderButtonStyle"
-       android:layout_width="match_parent"
-       android:layout_height="64dp" />
-     ```
-
-     
+   
 
 2. `gradientOrientation`方向参数：
 
-```xml
-<attr name="gradientOrientation" format="enum">
-  <enum name="TOP_BOTTOM" value="1"/>
-  <enum name="TR_BL" value="2"/>
-  <enum name="RIGHT_LEFT" value="3"/>
-  <enum name="BR_TL" value="4"/>
-  <enum name="BOTTOM_TOP" value="5"/>
-  <enum name="BL_TR" value="6"/>
-  <enum name="LEFT_RIGHT" value="7"/>
-  <enum name="TL_BR" value="8"/>
-</attr>
-```
+   ```xml
+   <attr name="gradientOrientation" format="enum">
+     <enum name="TOP_BOTTOM" value="1"/>
+     <enum name="TR_BL" value="2"/>
+     <enum name="RIGHT_LEFT" value="3"/>
+     <enum name="BR_TL" value="4"/>
+     <enum name="BOTTOM_TOP" value="5"/>
+     <enum name="BL_TR" value="6"/>
+     <enum name="LEFT_RIGHT" value="7"/>
+     <enum name="TL_BR" value="8"/>
+   </attr>
+   ```
+
+   
 

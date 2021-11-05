@@ -1,6 +1,4 @@
-BasePopupView - 通用弹窗组件
-
-> 该组件大致可以区分成如下几种类型
+# BasePopupView - 通用弹窗组件
 
 #### 1. 普通对话框
 
