@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>AGSwitch</title>
+  <title>AGEditDialog</title>
   <style>
     html {
       line-height: 1.5;
@@ -213,30 +213,37 @@
   <![endif]-->
 </head>
 <body>
-<h2 id="agswitch---开关组件">AGSwitch - 开关组件</h2>
-<h2 id="xml-code">XML Code</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">com.guang.max.widget.switchview.AGSwitch</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:id=</span><span class="st">&quot;@+id/switchDefault&quot;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_marginTop=</span><span class="st">&quot;@dimen/ig_dp_4&quot;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:checked=</span><span class="st">&quot;false&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:thumbColor=</span><span class="st">&quot;滑块颜色&quot;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:thumbSize=</span><span class="st">&quot;滑块尺寸(圆形滑块的直径)&quot;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackColor=</span><span class="st">&quot;轨道颜色&quot;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackColor_check=</span><span class="st">&quot;选中时，轨道颜色&quot;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackHeight=</span><span class="st">&quot;轨道高度&quot;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackWidth=</span><span class="st">&quot;轨道宽度&quot;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackRadius=</span><span class="st">&quot;轨道圆角&quot;</span> /&gt;</span></code></pre></div>
+<h2 id="ageditdialog---单行输入框弹窗控件">AGEditDialog - 单行输入框弹窗控件</h2>
+<h2 id="kotlincode">KotlinCode</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>AGEditDialog<span class="op">.</span>builder<span class="op">(</span>context<span class="op">)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 顶部标题</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setTitle<span class="op">(</span>findString<span class="op">(</span>R<span class="op">.</span>string<span class="op">.</span>ui_create_new_classify<span class="op">))</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 默认内容和PlaceHolder</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setContent<span class="op">(</span><span class="st">&quot;&quot;</span><span class="op">,</span> findString<span class="op">(</span>R<span class="op">.</span>string<span class="op">.</span>ui_plz_input_classify_name<span class="op">))</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 取消按钮的回调事件</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setNegativeBtn<span class="op">(</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    findString<span class="op">(</span>R<span class="op">.</span>string<span class="op">.</span>ui_cancel<span class="op">),</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">object</span> <span class="op">:</span> <span class="dt">AGEditDialogView</span>.<span class="dt">OnClickListener</span> <span class="op">{</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">override</span> <span class="kw">fun</span> <span class="fu">onClick</span><span class="op">(</span><span class="va">dialog</span><span class="op">:</span> <span class="dt">DialogInterface</span><span class="op">,</span> <span class="va">which</span><span class="op">:</span> <span class="dt">Int</span><span class="op">,</span> <span class="va">content</span><span class="op">:</span> <span class="dt">CharSequence</span><span class="op">?)</span> <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        dialog<span class="op">.</span>dismiss<span class="op">()</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="co">// do sth</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">})</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 确认按钮的回调事件</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setPositiveBtn<span class="op">(</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    findString<span class="op">(</span>R<span class="op">.</span>string<span class="op">.</span>ui_ok<span class="op">),</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">object</span> <span class="op">:</span> <span class="dt">AGEditDialogView</span>.<span class="dt">OnClickListener</span> <span class="op">{</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>      <span class="kw">override</span> <span class="kw">fun</span> <span class="fu">onClick</span><span class="op">(</span><span class="va">dialog</span><span class="op">:</span> <span class="dt">DialogInterface</span><span class="op">,</span> <span class="va">which</span><span class="op">:</span> <span class="dt">Int</span><span class="op">,</span> <span class="va">content</span><span class="op">:</span> <span class="dt">CharSequence</span><span class="op">?)</span> <span class="op">{</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        dialog<span class="op">.</span>dismiss<span class="op">()</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="co">// do sth</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>      <span class="op">}</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">})</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>show<span class="op">()</span></span></code></pre></div>
 <h2 id="说明">说明</h2>
-<p>支持以下特性：</p>
-<ul>
-<li>设置<strong>轨道宽高</strong>：trackWidth、trackHeight</li>
-<li>设置<strong>轨道圆角</strong>：trackRadius 默认为trackWidth的一半</li>
-<li>设置<strong>轨道颜色</strong>：正常颜色 trackColor 默认为#EBEDF0、选中颜色 trackColor_check 默认为#<em>ff4c00</em></li>
-<li>设置<strong>滑块尺寸</strong>：thumbSize</li>
-<li>设置<strong>滑块颜色</strong>：thumbColor 默认为#ffffff</li>
-</ul>
-<p>使用中需要注意的是，系统测量的<strong>轨道宽度</strong>最小为<strong>滑块宽度</strong>的2倍，目前UI没出规范，如果UI稿不满足这个条件，需要去沟通下。</p>
+<ol type="1">
+<li>支持设置标题、输入框内容、hint和按钮的文案。</li>
+<li>【视觉】设置对话框最小高度为140px，宽度为310px，圆角为8px。</li>
+<li>【视觉】内容较多时，对话框高度若即将超过380时，内容区滑动展示</li>
+</ol>
 </body>
 </html>

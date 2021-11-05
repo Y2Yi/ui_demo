@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>AGSwitch</title>
+  <title>GuangTitleBarLayout</title>
   <style>
     html {
       line-height: 1.5;
@@ -213,30 +213,39 @@
   <![endif]-->
 </head>
 <body>
-<h2 id="agswitch---开关组件">AGSwitch - 开关组件</h2>
-<h2 id="xml-code">XML Code</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">com.guang.max.widget.switchview.AGSwitch</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:id=</span><span class="st">&quot;@+id/switchDefault&quot;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_width=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_height=</span><span class="st">&quot;wrap_content&quot;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:layout_marginTop=</span><span class="st">&quot;@dimen/ig_dp_4&quot;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ot">    android:checked=</span><span class="st">&quot;false&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:thumbColor=</span><span class="st">&quot;滑块颜色&quot;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:thumbSize=</span><span class="st">&quot;滑块尺寸(圆形滑块的直径)&quot;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackColor=</span><span class="st">&quot;轨道颜色&quot;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackColor_check=</span><span class="st">&quot;选中时，轨道颜色&quot;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackHeight=</span><span class="st">&quot;轨道高度&quot;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackWidth=</span><span class="st">&quot;轨道宽度&quot;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ot">    app:trackRadius=</span><span class="st">&quot;轨道圆角&quot;</span> /&gt;</span></code></pre></div>
-<h2 id="说明">说明</h2>
-<p>支持以下特性：</p>
-<ul>
-<li>设置<strong>轨道宽高</strong>：trackWidth、trackHeight</li>
-<li>设置<strong>轨道圆角</strong>：trackRadius 默认为trackWidth的一半</li>
-<li>设置<strong>轨道颜色</strong>：正常颜色 trackColor 默认为#EBEDF0、选中颜色 trackColor_check 默认为#<em>ff4c00</em></li>
-<li>设置<strong>滑块尺寸</strong>：thumbSize</li>
-<li>设置<strong>滑块颜色</strong>：thumbColor 默认为#ffffff</li>
-</ul>
-<p>使用中需要注意的是，系统测量的<strong>轨道宽度</strong>最小为<strong>滑块宽度</strong>的2倍，目前UI没出规范，如果UI稿不满足这个条件，需要去沟通下。</p>
+<h2 id="guangtitlebarlayout---导航栏">GuangTitleBarLayout - 导航栏</h2>
+<h2 id="kotlin-code">Kotlin Code</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode kotlin"><code class="sourceCode kotlin"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 展示部分</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>GuangTitleBarLayoutBuilder<span class="op">.</span>builder<span class="op">(</span>ctx<span class="op">)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 底部分割线是否展示</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span>changeLineStatus<span class="op">(</span><span class="kw">Boolean</span><span class="op">)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 左侧</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span>changeIvLeftStatus<span class="op">(</span><span class="kw">Boolean</span><span class="op">)</span><span class="co">// 是否含有左侧图标按钮</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span>setIvLeft<span class="op">(</span>drawableId<span class="op">)</span><span class="co">// 左侧图标</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 中间</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setBarTitle<span class="op">(</span><span class="kw">String</span><span class="op">)</span> <span class="co">// 中心标题    </span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setIvTitleRight<span class="op">(</span>Drawable<span class="op">)</span> <span class="co">// 标题右侧的一个小图标</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 右侧</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span>setIvRight<span class="op">(</span>R<span class="op">.</span>drawable<span class="op">.</span>ui_icon_setting<span class="op">)</span> <span class="co">// 右侧的小图标</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span>setRightTxt<span class="op">(</span><span class="kw">String</span><span class="op">)</span> <span class="co">// 右侧的文字</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setRightTxtColor<span class="op">(</span>Color<span class="op">)</span> <span class="co">// 右侧文字颜色</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setIvRight<span class="op">(</span>drawableId<span class="op">)</span> <span class="co">// （从右往左数）右侧的第一个图标</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setIvRightTwo<span class="op">(</span>drawableId<span class="op">)</span><span class="co">// 第二个图标</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 点击事件</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">//左侧ImageView</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setIvLeftClickListener<span class="op">()</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 右边ImageView</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setIvRightClickListener<span class="op">()</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 右边TextView</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setRightTxtClickListener<span class="op">()</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 标题右边的TextView</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setIvTitleRightClickListener<span class="op">()</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 标题右边的第二个TextView</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span>setIvRightTwoClickListener<span class="op">()</span></span></code></pre></div>
 </body>
 </html>
