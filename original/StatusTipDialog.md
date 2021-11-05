@@ -1,4 +1,4 @@
-# StatusTipDialog - 轻提示（带有图标样式）
+## StatusTipDialog - 轻提示（带有图标样式）
 
 ## Kotlin Code
 

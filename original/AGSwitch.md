@@ -1,4 +1,4 @@
-# AGSwitch - 开关组件
+## AGSwitch - 开关组件
 
 ## XML Code
 
