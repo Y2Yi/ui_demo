@@ -1,4 +1,4 @@
-## PageNavigation - 页面底部导航
+## PageNavigationView - 页面底部导航
 
 ## XML Code
 
