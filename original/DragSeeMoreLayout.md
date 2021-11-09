@@ -6,7 +6,7 @@
 
 使用时，使用DragSeeMoreLayout包裹RecyclerView即可，需要注意的是拖拽的方向，如果希望实现横向拖拖拽，需要在DragSeeMoreLayout中配置`android:orientation="horizontal"`，纵向同理；如果需要实现隐藏的提示文案，如下图：
 
-<img src="/Users/yzy/pandoc/pangit/original/res/image-20211108194047031.png" alt="image-20211108194047031" style="zoom: 50%;" />
+<img src="../original/res/image-20211108194047031.png" alt="image-20211108194047031" style="zoom: 50%;" />
 
 需要将查看更多字样动态地加载到布局当中：
 
